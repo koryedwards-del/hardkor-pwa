@@ -1,5 +1,14 @@
 import { computePlan, generateMealSlots } from './burnEngine.js';
 import { getCoachDay, getProgramDay } from './coachEngine.js';
+import {
+  buildGroceryFromEntries,
+  createManualGroceryItem,
+  entriesLast7Days,
+  formatGroceryQuantity,
+  groceryDateRangeLabel,
+  groceryDisplayName,
+  groupGroceryItems,
+} from './groceryEngine.js';
 
 const store = {
   profile: null,
@@ -13,6 +22,13 @@ const store = {
   foodSearch: {},
   coachCardIndex: 0,
   coachProgress: { day1Complete: false },
+  groceryItems: [],
+  groceryChecked: {},
+  groceryRemoved: {},
+  groceryExtras: [],
+  showGroceryAdd: false,
+  groceryAddTab: 'protein',
+  groceryAddSearch: '',
 };
 
 const INTENSITY_OPTS = [
@@ -74,6 +90,45 @@ function markCoachDayComplete(dayNumber) {
     store.coachProgress.day1Complete = true;
     saveCoachProgress();
   }
+}
+
+function refreshGroceryList() {
+  const fromLogs = buildGroceryFromEntries(entriesLast7Days(store.entries), store.foods);
+  const logNames = new Set(fromLogs.map((i) => i.foodName));
+  const extras = store.groceryExtras.filter((e) => !logNames.has(e.foodName));
+  store.groceryItems = [...fromLogs, ...extras]
+    .filter((i) => !store.groceryRemoved[i.id])
+    .map((i) => ({ ...i, isChecked: !!store.groceryChecked[i.id] }));
+}
+
+function toggleGroceryCheck(id) {
+  store.groceryChecked[id] = !store.groceryChecked[id];
+  const item = store.groceryItems.find((i) => i.id === id);
+  if (item) item.isChecked = store.groceryChecked[id];
+  render();
+}
+
+function removeGroceryItem(id) {
+  store.groceryRemoved[id] = true;
+  store.groceryItems = store.groceryItems.filter((i) => i.id !== id);
+  render();
+}
+
+function addGroceryFood(foodName) {
+  const food = store.foods.find((f) => f.name === foodName);
+  if (!food) return;
+  const names = new Set(store.groceryItems.map((i) => i.foodName));
+  if (names.has(food.name)) return;
+  const item = { ...createManualGroceryItem(food), isChecked: false };
+  store.groceryExtras.push(item);
+  store.groceryItems.push(item);
+  render();
+}
+
+function uncheckAllGrocery() {
+  store.groceryChecked = {};
+  store.groceryItems.forEach((i) => { i.isChecked = false; });
+  render();
 }
 
 function bumpPickCount(foodName) {
@@ -484,6 +539,7 @@ function renderHome() {
       </div>
       <div class="btn-stack">
         <button type="button" class="btn-primary" data-nav="plan">Your Custom Food Plan</button>
+        <button type="button" class="btn-primary" data-nav="grocery">Grocery List</button>
         <button type="button" class="btn-primary" data-nav="coach">Coaching</button>
         <button type="button" class="btn-secondary" data-nav="setup">Edit Your Custom Food Plan</button>
       </div>
@@ -624,6 +680,119 @@ function renderCoach() {
     </div>`;
 }
 
+function renderGroceryAddSheet() {
+  if (!store.showGroceryAdd) return '';
+
+  const tabCats = {
+    protein: ['protein'],
+    dairy: ['dairy'],
+    grains: ['grain'],
+    starches: ['starch'],
+    vegetables: ['vegetable'],
+    fruits: ['fruit'],
+    fats: ['fat'],
+  };
+  const tabLabels = {
+    protein: 'Protein', dairy: 'Dairy', grains: 'Grains', starches: 'Starches',
+    vegetables: 'Vegetables', fruits: 'Fruits', fats: 'Fats',
+  };
+  const cats = tabCats[store.groceryAddTab] || ['protein'];
+  const onList = new Set(store.groceryItems.map((i) => i.foodName));
+  let foods = store.foods.filter((f) => cats.includes(f.category)).sort((a, b) => a.name.localeCompare(b.name));
+  const q = store.groceryAddSearch.trim().toLowerCase();
+  if (q) foods = foods.filter((f) => f.name.toLowerCase().includes(q));
+  const picks = foods.filter((f) => (store.pickCounts[f.name] || 0) > 0)
+    .sort((a, b) => (store.pickCounts[b.name] || 0) - (store.pickCounts[a.name] || 0));
+  const pickNames = new Set(picks.map((f) => f.name));
+  const rest = foods.filter((f) => !pickNames.has(f.name));
+
+  const row = (food) => {
+    const on = onList.has(food.name);
+    return `
+      <button type="button" class="grocery-add-row ${on ? 'on-list' : ''}" data-grocery-add-food="${encodeURIComponent(food.name)}" ${on ? 'disabled' : ''}>
+        <span class="grocery-add-check">${on ? '✓' : '○'}</span>
+        <span class="grocery-add-name">${food.name}</span>
+        ${on ? '<span class="grocery-add-tag">On list</span>' : `<span class="grocery-add-serving">${food.servingDescription}</span>`}
+      </button>`;
+  };
+
+  return `
+    <div class="sheet-backdrop" data-close-grocery-add>
+      <div class="sheet-panel" role="dialog">
+        <div class="sheet-header">
+          <button type="button" class="back-btn" data-close-grocery-add>Close</button>
+          <h2>Select Additional Foods</h2>
+        </div>
+        <div class="grocery-add-tabs">
+          ${Object.keys(tabCats).map((tab) => `
+            <button type="button" class="${store.groceryAddTab === tab ? 'active' : ''}" data-grocery-add-tab="${tab}">${tabLabels[tab]}</button>
+          `).join('')}
+        </div>
+        <input type="search" class="food-search" placeholder="Search foods…" data-grocery-add-search value="${store.groceryAddSearch}" />
+        <div class="grocery-add-list">
+          ${picks.length ? `<div class="top-picks-label">★ Your Top Picks</div>${picks.map(row).join('')}${rest.length ? '<div class="food-divider"></div>' : ''}` : ''}
+          ${rest.length ? `<div class="food-hint">All ${tabLabels[store.groceryAddTab]}</div>${rest.map(row).join('')}` : ''}
+          ${!foods.length ? '<div class="food-empty">No foods match your search</div>' : ''}
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderGrocery() {
+  const groups = groupGroceryItems(store.groceryItems);
+  const checkedCount = store.groceryItems.filter((i) => i.isChecked).length;
+
+  return `
+    <div class="screen grocery-screen">
+      <div class="plan-header">
+        <button type="button" class="back-btn" data-nav="home">← Home</button>
+        <h1>Grocery List</h1>
+      </div>
+
+      <div class="grocery-header">
+        <div class="grocery-header-title">last 7 days food choices</div>
+        <div class="grocery-header-range">${groceryDateRangeLabel()}</div>
+        ${store.groceryItems.length ? `<div class="grocery-header-count">${store.groceryItems.length} items</div>` : ''}
+      </div>
+
+      <button type="button" class="grocery-add-btn" data-open-grocery-add>
+        <span>+</span> Select Additional Foods
+      </button>
+
+      ${!store.groceryItems.length ? `
+      <div class="grocery-empty">
+        <h2>No items yet</h2>
+        <p>Start logging meals in your Custom Food Plan. Your grocery list builds from what you actually eat.</p>
+      </div>` : ''}
+
+      ${groups.map(({ section, items }) => `
+        <div class="grocery-section">
+          <div class="grocery-section-header">
+            <span class="grocery-section-icon">${section.icon}</span>
+            <span class="grocery-section-label">${section.label}</span>
+            <span class="grocery-section-count">${items.length}</span>
+          </div>
+          ${items.map((item) => `
+            <div class="grocery-row ${item.isChecked ? 'checked' : ''}">
+              <button type="button" class="grocery-check" data-grocery-check="${item.id}" aria-label="Check off ${item.foodName}">
+                ${item.isChecked ? '✓' : '○'}
+              </button>
+              <div class="grocery-row-body">
+                <div class="grocery-row-name">${groceryDisplayName(item.foodName)}</div>
+                <div class="grocery-row-qty">${formatGroceryQuantity(item)}</div>
+              </div>
+              <button type="button" class="grocery-remove" data-grocery-remove="${item.id}" aria-label="Remove ${item.foodName}">×</button>
+            </div>`).join('')}
+        </div>`).join('')}
+
+      ${checkedCount > 0 ? `
+        <button type="button" class="grocery-uncheck-all" data-grocery-uncheck-all>Uncheck All</button>` : ''}
+
+      <div style="height:32px"></div>
+      ${renderGroceryAddSheet()}
+    </div>`;
+}
+
 function render() {
   const root = document.getElementById('app');
   if (store.screen === 'loading') {
@@ -633,6 +802,7 @@ function render() {
   if (store.screen === 'setup') root.innerHTML = renderOnboarding();
   else if (store.screen === 'plan') root.innerHTML = renderPlan();
   else if (store.screen === 'coach') root.innerHTML = renderCoach();
+  else if (store.screen === 'grocery') root.innerHTML = renderGrocery();
   else root.innerHTML = renderHome();
   bindEvents();
 }
@@ -692,6 +862,10 @@ function bindEvents() {
     btn.addEventListener('click', () => {
       const nav = btn.dataset.nav;
       if (nav === 'coach') store.coachCardIndex = 0;
+      if (nav === 'grocery') {
+        refreshGroceryList();
+        store.showGroceryAdd = false;
+      }
       store.screen = nav === 'setup' ? 'setup' : nav;
       store.expandedMeal = null;
       render();
@@ -797,6 +971,54 @@ function bindEvents() {
   });
 
   bindCoachCarousel();
+
+  document.querySelector('[data-open-grocery-add]')?.addEventListener('click', () => {
+    store.showGroceryAdd = true;
+    render();
+  });
+
+  document.querySelectorAll('[data-close-grocery-add]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if (el.classList.contains('sheet-backdrop') && e.target !== el) return;
+      store.showGroceryAdd = false;
+      render();
+    });
+  });
+
+  document.querySelector('.sheet-panel')?.addEventListener('click', (e) => e.stopPropagation());
+
+  document.querySelectorAll('[data-grocery-add-tab]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      store.groceryAddTab = btn.dataset.groceryAddTab;
+      render();
+    });
+  });
+
+  document.querySelector('[data-grocery-add-search]')?.addEventListener('input', (e) => {
+    store.groceryAddSearch = e.target.value;
+    render();
+    const next = document.querySelector('[data-grocery-add-search]');
+    if (next) {
+      next.focus();
+      next.setSelectionRange(next.value.length, next.value.length);
+    }
+  });
+
+  document.querySelectorAll('[data-grocery-add-food]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      addGroceryFood(decodeURIComponent(btn.dataset.groceryAddFood));
+    });
+  });
+
+  document.querySelectorAll('[data-grocery-check]').forEach((btn) => {
+    btn.addEventListener('click', () => toggleGroceryCheck(btn.dataset.groceryCheck));
+  });
+
+  document.querySelectorAll('[data-grocery-remove]').forEach((btn) => {
+    btn.addEventListener('click', () => removeGroceryItem(btn.dataset.groceryRemove));
+  });
+
+  document.querySelector('[data-grocery-uncheck-all]')?.addEventListener('click', uncheckAllGrocery);
 }
 
 async function init() {

@@ -683,3 +683,270 @@ button {
 .coach-empty-icon {
   font-size: 48px;
 }
+
+.grocery-screen {
+  padding-bottom: 24px;
+}
+
+.grocery-header {
+  text-align: center;
+  padding: 12px 20px 8px;
+}
+
+.grocery-header-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.grocery-header-range {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.grocery-header-count {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.grocery-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: calc(100% - 40px);
+  margin: 12px 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(232, 114, 42, 0.12);
+  border: 1px solid rgba(232, 114, 42, 0.3);
+  color: var(--flame);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.grocery-add-btn span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.grocery-empty {
+  text-align: center;
+  padding: 32px 40px;
+}
+
+.grocery-empty h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.grocery-empty p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.grocery-section {
+  margin: 12px 20px;
+  border-radius: 14px;
+  background: #121212;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.grocery-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.grocery-section-icon {
+  font-size: 20px;
+}
+
+.grocery-section-label {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.grocery-section-count {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--flame);
+  background: rgba(232, 114, 42, 0.15);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.grocery-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.grocery-row:last-child {
+  border-bottom: none;
+}
+
+.grocery-row.checked {
+  background: rgba(255,255,255,0.03);
+}
+
+.grocery-row.checked .grocery-row-name,
+.grocery-row.checked .grocery-row-qty {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.grocery-check {
+  font-size: 22px;
+  color: var(--muted);
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.grocery-row.checked .grocery-check {
+  color: var(--cyan);
+}
+
+.grocery-row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.grocery-row-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.grocery-row-qty {
+  font-size: 14px;
+  color: var(--cyan);
+  margin-top: 2px;
+}
+
+.grocery-remove {
+  font-size: 22px;
+  color: #666;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.grocery-uncheck-all {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sheet-panel {
+  width: 100%;
+  max-height: 85vh;
+  background: #0a0a0a;
+  border-radius: 16px 16px 0 0;
+  padding-bottom: var(--safe-bottom);
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sheet-header h2 {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.grocery-add-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px 16px;
+  scrollbar-width: none;
+}
+
+.grocery-add-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.grocery-add-tabs button {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.1);
+  color: var(--text);
+}
+
+.grocery-add-tabs button.active {
+  background: var(--flame);
+  color: #000;
+}
+
+.sheet-panel .food-search {
+  margin: 0 16px 8px;
+  width: calc(100% - 32px);
+}
+
+.grocery-add-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 8px 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.grocery-add-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.grocery-add-row.on-list {
+  opacity: 0.5;
+}
+
+.grocery-add-check {
+  width: 20px;
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.grocery-add-name {
+  flex: 1;
+  font-size: 15px;
+}
+
+.grocery-add-serving,
+.grocery-add-tag {
+  font-size: 12px;
+  color: var(--muted);
+}
