@@ -1,0 +1,2226 @@
+[
+  {
+    "name": "Beef, eye of round",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 26.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beef, top sirloin",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 27.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beef, 95% lean ground",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bison, roasted",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 28.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Chicken breast, no skin",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 26.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Turkey breast",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 27.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pork tenderloin",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 27.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pork loin chop, lean",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 26.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pork, lean ham",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 35.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Venison, roasted",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 26.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bluefish, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cod, Atlantic, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 35.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Flounder, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 37.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Haddock, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 33.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Halibut, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 36.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mahi-mahi, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Perch, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 32.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pike, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 32.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pollock, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Sea bass, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Snapper, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 30.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Sole, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 37.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Swordfish, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 35.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tilapia, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Trout, rainbow, baked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tuna, yellowfin",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 27.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tuna, canned in water",
+    "category": "protein",
+    "servingDescription": "drained",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Clams, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Crab, blue, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 44.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Crab, king, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 41.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lobster, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 43.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mussels, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Octopus, cooked",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 27.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Scallops, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 33.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Shrimp, steamed",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squid (calamari), plain",
+    "category": "protein",
+    "servingDescription": "cooked",
+    "gramWeight": 45.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Egg whites",
+    "category": "protein",
+    "servingDescription": "whites",
+    "gramWeight": 73.0,
+    "unitsPerServing": 2.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Egg substitute (liquid)",
+    "category": "protein",
+    "servingDescription": "liquid",
+    "gramWeight": 80.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cottage cheese, 1% fat",
+    "category": "dairy",
+    "servingDescription": "as-is",
+    "gramWeight": 64.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cottage cheese, 2% fat",
+    "category": "dairy",
+    "servingDescription": "as-is",
+    "gramWeight": 68.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cottage cheese, nonfat",
+    "category": "dairy",
+    "servingDescription": "as-is",
+    "gramWeight": 78.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Greek yogurt, lowfat",
+    "category": "dairy",
+    "servingDescription": "as-is",
+    "gramWeight": 80.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Greek yogurt, nonfat",
+    "category": "dairy",
+    "servingDescription": "as-is",
+    "gramWeight": 78.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Skim milk (fat-free)",
+    "category": "dairy",
+    "servingDescription": "liquid",
+    "gramWeight": 235.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Yogurt, plain, nonfat",
+    "category": "dairy",
+    "servingDescription": "as-is",
+    "gramWeight": 140.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Potato, baked (flesh + skin)",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 66.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Potato, boiled",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 70.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Potato, red, boiled",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 77.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Potato, Yukon gold, baked",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 68.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Sweet potato, baked",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 68.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Yam, cooked",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 51.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cassava (yuca)",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 37.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Parsnips",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 82.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Plantain",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 45.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rutabaga",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 161.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Taro",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 40.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Water chestnuts",
+    "category": "starch",
+    "servingDescription": "as-is",
+    "gramWeight": 59.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Corn, sweet",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 74.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mixed peas and carrots",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 127.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peas, black-eyed",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 67.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peas, green",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 90.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peas, split",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 66.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pumpkin",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 286.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squash, acorn",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 135.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squash, butternut",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 120.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squash, spaghetti",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 203.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squash, summer (yellow)",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 412.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squash, winter (hubbard)",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 161.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Squash, zucchini",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 452.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Jicama",
+    "category": "starch",
+    "servingDescription": "raw",
+    "gramWeight": 159.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, black",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 59.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, garbanzo (chickpeas)",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 51.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, kidney",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 61.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, lima",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 67.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, navy",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 54.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, pinto",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 53.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beans, white (cannellini)",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 57.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lentils",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 70.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lentils, red",
+    "category": "starch",
+    "servingDescription": "cooked",
+    "gramWeight": 70.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bran flakes",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 18.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cheerios",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 19.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Corn flakes",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 17.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Corn grits",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 18.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cream of Rice",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 17.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cream of Wheat",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 19.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Farina",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 19.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Grape-Nuts",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 18.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oats, rolled",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 21.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice Chex",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 16.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Shredded Wheat",
+    "category": "grain",
+    "servingDescription": "dry",
+    "gramWeight": 18.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Amaranth",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 75.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Barley, pearled",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 50.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Buckwheat groats",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 70.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bulgur",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 75.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Couscous",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 60.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Farro (emmer)",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 58.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Millet",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 59.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Quinoa",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 66.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice, basmati",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 49.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice, brown",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 55.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice, jasmine",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 50.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice, white",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 49.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice, wild",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 66.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Egg noodles",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 56.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pasta, regular",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 56.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pasta, whole wheat",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 53.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice noodles",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 56.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Soba noodles",
+    "category": "grain",
+    "servingDescription": "cooked",
+    "gramWeight": 65.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bagel, plain",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 26.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, French/Italian",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 25.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, multigrain",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 32.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, pita, white",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 25.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, pita, whole wheat",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 26.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, pumpernickel",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, rye",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 29.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, sourdough",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 28.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, white",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 28.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bread, whole wheat",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 32.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "English muffin",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Hamburger/hot dog bun",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 29.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Hard roll",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 24.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tortilla, corn (6-inch)",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 31.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Crackers, saltine",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 19.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Popcorn, air-popped",
+    "category": "grain",
+    "servingDescription": "popped",
+    "gramWeight": 18.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pretzels, hard",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 18.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Rice cakes, plain",
+    "category": "grain",
+    "servingDescription": "as-is",
+    "gramWeight": 17.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Arugula",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 270.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bok choy",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 455.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cabbage, green, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 172.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cabbage, green, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 278.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cabbage, red, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 135.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cabbage, red, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 227.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Collard greens, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 185.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Collard greens, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 263.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Endive",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 294.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kale, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 114.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kale, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 227.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lettuce, iceberg",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 333.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lettuce, romaine",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 303.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mustard greens, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 213.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mustard greens, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 476.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Spinach, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 278.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Spinach, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 263.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Swiss chard, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 270.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Swiss chard, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 244.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Turnip greens, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 278.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Broccoli, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 152.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Broccoli, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 139.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Broccoli rabe, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 345.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Brussels sprouts, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 112.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Brussels sprouts, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 141.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cauliflower, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 200.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cauliflower, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 244.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kohlrabi, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 161.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kohlrabi, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 179.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Garlic",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 30.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Leeks, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 132.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Onions, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 108.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Onions, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 147.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Scallions (green onions)",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 137.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Shallots",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 60.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Artichoke hearts, canned",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 167.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cucumber",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 278.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Eggplant, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 169.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Eggplant, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 286.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peppers, green bell, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 217.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peppers, green bell, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 149.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peppers, red bell, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 167.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peppers, red bell, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 159.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peppers, jalapeno",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 154.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tomato, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 256.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tomato, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 250.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tomato, canned (stewed)",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 250.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tomato paste",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 53.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tomato sauce",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 185.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tomatillos",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 172.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Beets",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 104.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Carrots, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 104.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Carrots, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 122.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Celery",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 333.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Celery root (celeriac)",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 139.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Fennel bulb",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 137.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Radishes",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 294.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Turnips, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 156.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Turnips, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 227.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Asparagus, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 256.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Asparagus, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 244.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bean sprouts (mung), raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 169.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bean sprouts (mung), cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 238.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Green beans, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 141.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Green beans, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 141.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Snap peas (sugar snap)",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 132.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Snow peas",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 143.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Wax beans (yellow), cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 213.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Okra, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 133.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Okra, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 222.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mushrooms, white, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 303.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mushrooms, white, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 189.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mushrooms, portobello, raw",
+    "category": "vegetable",
+    "servingDescription": "raw",
+    "gramWeight": 256.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mushrooms, portobello, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 227.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mushrooms, shiitake, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 70.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Sauerkraut",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 233.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kimchi",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 417.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pickles (dill)",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 435.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Bamboo shoots, cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 370.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Hearts of palm, canned",
+    "category": "vegetable",
+    "servingDescription": "as-is",
+    "gramWeight": 250.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nopales (cactus), cooked",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 303.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seaweed (nori), dried",
+    "category": "vegetable",
+    "servingDescription": "dry",
+    "gramWeight": 196.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Water spinach (kangkong)",
+    "category": "vegetable",
+    "servingDescription": "cooked",
+    "gramWeight": 323.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Apple",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 130.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Apricots",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 162.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Banana",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 79.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Blackberries",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 188.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Blueberries",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 124.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Boysenberries",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 188.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cantaloupe",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 220.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cherries, sweet",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 112.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Clementines",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 150.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Cranberries",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 148.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Dragon fruit (pitaya)",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 164.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Figs, fresh",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 94.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Grapefruit",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 168.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Grapes",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 99.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Guava",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 126.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Honeydew",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 198.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Jackfruit",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 78.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kiwi",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 122.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Kumquats",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 113.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lemon",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 194.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lime",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 171.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Lychee",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 109.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Mango",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 120.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nectarine",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 170.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Orange",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 153.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Papaya",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 167.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Passion fruit",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 77.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peach",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 189.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pear",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 118.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Persimmon",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 97.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pineapple",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 137.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Plums",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 158.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Pomegranate",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 96.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Raspberries",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 151.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Star fruit (carambola)",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 269.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Strawberries",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 234.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tangerines",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 135.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Watermelon",
+    "category": "fruit",
+    "servingDescription": "raw",
+    "gramWeight": 237.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oil, avocado",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oil, coconut",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oil, flaxseed",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oil, olive",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oil, sesame",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Oil, vegetable/canola",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Butter",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 6.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Butter, whipped",
+    "category": "fat",
+    "servingDescription": "2 tsp",
+    "gramWeight": 8.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Ghee (clarified butter)",
+    "category": "fat",
+    "servingDescription": "1 tsp",
+    "gramWeight": 5.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Avocado",
+    "category": "fat",
+    "servingDescription": "\u00bc cup",
+    "gramWeight": 34.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Guacamole",
+    "category": "fat",
+    "servingDescription": "2 tbsp",
+    "gramWeight": 38.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, almonds",
+    "category": "fat",
+    "servingDescription": "7 whole",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, Brazil",
+    "category": "fat",
+    "servingDescription": "2 whole",
+    "gramWeight": 7.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, cashews",
+    "category": "fat",
+    "servingDescription": "6 whole",
+    "gramWeight": 11.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, macadamia",
+    "category": "fat",
+    "servingDescription": "2 whole",
+    "gramWeight": 7.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, peanuts",
+    "category": "fat",
+    "servingDescription": "8 whole",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, pecans",
+    "category": "fat",
+    "servingDescription": "2 whole",
+    "gramWeight": 7.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, pine nuts",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 7.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, pistachios",
+    "category": "fat",
+    "servingDescription": "15 whole",
+    "gramWeight": 11.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Nuts, walnuts",
+    "category": "fat",
+    "servingDescription": "5 halves",
+    "gramWeight": 8.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Almond butter",
+    "category": "fat",
+    "servingDescription": "1\u00bd tsp",
+    "gramWeight": 9.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Peanut butter",
+    "category": "fat",
+    "servingDescription": "1\u00bd tsp",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Tahini (sesame paste)",
+    "category": "fat",
+    "servingDescription": "1\u00bd tsp",
+    "gramWeight": 9.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seeds, chia",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 16.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seeds, flax (ground)",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 12.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seeds, hemp",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seeds, pumpkin",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seeds, sesame",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Seeds, sunflower",
+    "category": "fat",
+    "servingDescription": "1 tbsp",
+    "gramWeight": 10.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Olives, black",
+    "category": "fat",
+    "servingDescription": "10 whole",
+    "gramWeight": 47.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  },
+  {
+    "name": "Olives, green",
+    "category": "fat",
+    "servingDescription": "10 whole",
+    "gramWeight": 33.0,
+    "unitsPerServing": 0.0,
+    "fatBracket": 0.0
+  }
+]
