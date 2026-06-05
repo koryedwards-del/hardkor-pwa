@@ -9,6 +9,8 @@ import {
   groceryDisplayName,
   groupGroceryItems,
 } from './groceryEngine.js';
+import { QUESTION_COUNT, WELCOME_COUNT } from './onboardingEngine.js';
+import { bindOnboardingEvents, initOnboardingForm, renderOnboarding } from './onboardingUI.js';
 
 const store = {
   profile: null,
@@ -29,17 +31,14 @@ const store = {
   showGroceryAdd: false,
   groceryAddTab: 'protein',
   groceryAddSearch: '',
+  onboardingPage: 0,
+  onboardingEditMode: false,
+  onboardingForm: null,
 };
 
-const INTENSITY_OPTS = [
-  { v: 1.0, label: '1.0 Sedentary' },
-  { v: 1.5, label: '1.5 Light' },
-  { v: 2.0, label: '2.0 Moderate' },
-  { v: 2.5, label: '2.5 Active' },
-  { v: 3.0, label: '3.0 Heavy' },
-  { v: 3.5, label: '3.5 Very Heavy' },
-  { v: 4.0, label: '4.0 Extreme' },
-];
+function hasCompletedOnboarding() {
+  return localStorage.getItem('hardkor_onboarding_complete') === 'true';
+}
 
 function todayKey() {
   return new Date().toISOString().slice(0, 10);
@@ -475,60 +474,6 @@ function mealProgress(slot) {
   return { required: required.length, logged: logged.length };
 }
 
-function renderOnboarding() {
-  const p = store.profile || {};
-  return `
-    <div class="screen">
-      <div class="onboard-title">
-        <h1>Your Custom Plan</h1>
-        <p>Answer a few questions. The HARDKOR engine calculates your exact daily servings.</p>
-      </div>
-      <form class="form-block" id="setupForm">
-        <label>First name</label>
-        <input name="preferredName" value="${p.preferredName || ''}" required />
-
-        <label>Sex</label>
-        <div class="seg-row" data-seg="sex">
-          <button type="button" class="${(p.sex || 'Male') === 'Male' ? 'active' : ''}" data-val="Male">Male</button>
-          <button type="button" class="${p.sex === 'Female' ? 'active' : ''}" data-val="Female">Female</button>
-        </div>
-        <input type="hidden" name="sex" value="${p.sex || 'Male'}" />
-
-        <label>Age</label>
-        <input name="age" type="number" min="16" max="99" value="${p.age || 40}" required />
-
-        <label>Height (inches)</label>
-        <input name="heightInches" type="number" step="0.5" value="${p.heightInches || 70}" required />
-
-        <label>Bodyweight (lbs)</label>
-        <input name="totalWeight" type="number" step="0.1" value="${p.totalWeight || ''}" required />
-
-        <label>Body fat %</label>
-        <input name="fatPercent" type="number" step="0.1" value="${p.fatPercent || ''}" required />
-
-        <label>Work intensity</label>
-        <select name="workIntensity">
-          ${INTENSITY_OPTS.map((o) => `<option value="${o.v}" ${p.workIntensity === o.v ? 'selected' : ''}>${o.label}</option>`).join('')}
-        </select>
-
-        <label>Weight training (hrs/week)</label>
-        <input name="weightTrainingHours" type="number" step="0.5" min="0" value="${p.weightTrainingHours ?? 3}" />
-
-        <label>Cardio — high heart rate (hrs/week)</label>
-        <input name="cardioHours" type="number" step="0.5" min="0" value="${p.cardioHours ?? 2}" />
-
-        <label>Fat burning — low heart rate (hrs/week)</label>
-        <input name="fatBurningHours" type="number" step="0.5" min="0" value="${p.fatBurningHours ?? 3}" />
-
-        <label>Wake time</label>
-        <input name="wakeTime" type="time" value="${p.wakeTime || '08:00'}" />
-
-        <div style="height:24px"></div>
-        <button type="submit" class="btn-primary">Calculate My Plan</button>
-      </form>
-    </div>`;
-}
-
 function renderHome() {
   const name = store.profile?.preferredName || '';
   return `
@@ -549,7 +494,13 @@ function renderHome() {
 
 function renderPlan() {
   const plan = getPlan();
-  if (!plan) return renderOnboarding();
+  if (!plan) {
+    store.screen = 'onboarding';
+    initOnboardingForm(store);
+    store.onboardingPage = 0;
+    store.onboardingEditMode = false;
+    return renderOnboarding(store);
+  }
 
   const [wh, wm] = (store.profile.wakeTime || '08:00').split(':').map(Number);
   const slots = generateMealSlots(wh, wm, plan.servings);
@@ -799,12 +750,23 @@ function render() {
     root.innerHTML = '<div class="screen"><div class="logo-block"><div class="brand">HARDKOR</div></div></div>';
     return;
   }
-  if (store.screen === 'setup') root.innerHTML = renderOnboarding();
+  if (store.screen === 'onboarding') root.innerHTML = renderOnboarding(store);
   else if (store.screen === 'plan') root.innerHTML = renderPlan();
   else if (store.screen === 'coach') root.innerHTML = renderCoach();
   else if (store.screen === 'grocery') root.innerHTML = renderGrocery();
   else root.innerHTML = renderHome();
   bindEvents();
+  if (store.screen === 'onboarding') {
+    bindOnboardingEvents(store, {
+      render,
+      onComplete: () => {
+        const edit = store.onboardingEditMode;
+        store.onboardingEditMode = false;
+        store.screen = edit ? 'home' : 'plan';
+        render();
+      },
+    });
+  }
 }
 
 function updateCoachDots(idx, total) {
@@ -866,7 +828,16 @@ function bindEvents() {
         refreshGroceryList();
         store.showGroceryAdd = false;
       }
-      store.screen = nav === 'setup' ? 'setup' : nav;
+      if (nav === 'setup') {
+        initOnboardingForm(store);
+        store.onboardingEditMode = true;
+        store.onboardingPage = WELCOME_COUNT + QUESTION_COUNT;
+        store.screen = 'onboarding';
+        store.expandedMeal = null;
+        render();
+        return;
+      }
+      store.screen = nav;
       store.expandedMeal = null;
       render();
     });
@@ -880,31 +851,6 @@ function bindEvents() {
         row.parentElement.querySelector('input[type=hidden]').value = btn.dataset.val;
       });
     });
-  });
-
-  document.getElementById('setupForm')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const fd = new FormData(e.target);
-    const weight = Number(fd.get('totalWeight'));
-    const fat = Number(fd.get('fatPercent'));
-    const lbm = weight * (1 - fat / 100);
-    store.profile = {
-      preferredName: String(fd.get('preferredName')).trim(),
-      sex: fd.get('sex'),
-      age: Number(fd.get('age')),
-      heightInches: Number(fd.get('heightInches')),
-      totalWeight: weight,
-      fatPercent: fat,
-      leanBodyMass: lbm,
-      workIntensity: Number(fd.get('workIntensity')),
-      weightTrainingHours: Number(fd.get('weightTrainingHours')),
-      cardioHours: Number(fd.get('cardioHours')),
-      fatBurningHours: Number(fd.get('fatBurningHours')),
-      wakeTime: fd.get('wakeTime'),
-    };
-    saveProfile();
-    store.screen = 'plan';
-    render();
   });
 
   document.querySelectorAll('[data-toggle]').forEach((btn) => {
@@ -1031,7 +977,15 @@ async function init() {
   } catch (err) {
     console.error('Food database failed to load', err);
   }
-  store.screen = store.profile?.leanBodyMass > 0 ? 'home' : 'setup';
+  if (store.profile?.leanBodyMass > 0 && !hasCompletedOnboarding()) {
+    localStorage.setItem('hardkor_onboarding_complete', 'true');
+  }
+  store.screen = store.profile?.leanBodyMass > 0 && hasCompletedOnboarding() ? 'home' : 'onboarding';
+  if (store.screen === 'onboarding') {
+    initOnboardingForm(store);
+    store.onboardingPage = 0;
+    store.onboardingEditMode = false;
+  }
   render();
 
   if ('serviceWorker' in navigator) {

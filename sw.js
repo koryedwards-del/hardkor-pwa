@@ -1,4 +1,4 @@
-const CACHE = 'hardkor-v4';
+const CACHE = 'hardkor-v5';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,8 @@ const ASSETS = [
   './js/burnEngine.js',
   './js/coachEngine.js',
   './js/groceryEngine.js',
+  './js/onboardingEngine.js',
+  './js/onboardingUI.js',
   './data/foods.json',
   './manifest.json',
   './img/coach/card-1.png',
