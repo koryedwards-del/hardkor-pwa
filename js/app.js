@@ -1,4 +1,5 @@
 import { computePlan, generateMealSlots } from './burnEngine.js';
+import { getCoachDay, getProgramDay } from './coachEngine.js';
 
 const store = {
   profile: null,
@@ -10,6 +11,8 @@ const store = {
   expandedSections: {},
   sectionTabs: {},
   foodSearch: {},
+  coachCardIndex: 0,
+  coachProgress: { day1Complete: false },
 };
 
 const INTENSITY_OPTS = [
@@ -38,6 +41,8 @@ function load() {
     if (e) store.entries = JSON.parse(e);
     const c = localStorage.getItem('hardkor_pick_counts');
     if (c) store.pickCounts = JSON.parse(c);
+    const cp = localStorage.getItem('hardkor_coach_progress');
+    if (cp) store.coachProgress = JSON.parse(cp);
   } catch (err) {
     console.error(err);
   }
@@ -53,6 +58,22 @@ function saveEntries() {
 
 function savePickCounts() {
   localStorage.setItem('hardkor_pick_counts', JSON.stringify(store.pickCounts));
+}
+
+function saveCoachProgress() {
+  localStorage.setItem('hardkor_coach_progress', JSON.stringify(store.coachProgress));
+}
+
+function showCoachBanner() {
+  const day = getCoachDay(getProgramDay());
+  return day && !store.coachProgress.day1Complete;
+}
+
+function markCoachDayComplete(dayNumber) {
+  if (dayNumber === 1 && !store.coachProgress.day1Complete) {
+    store.coachProgress.day1Complete = true;
+    saveCoachProgress();
+  }
 }
 
 function bumpPickCount(foodName) {
@@ -463,6 +484,7 @@ function renderHome() {
       </div>
       <div class="btn-stack">
         <button type="button" class="btn-primary" data-nav="plan">Your Custom Food Plan</button>
+        <button type="button" class="btn-primary" data-nav="coach">Coaching</button>
         <button type="button" class="btn-secondary" data-nav="setup">Edit Your Custom Food Plan</button>
       </div>
       <p class="home-footer">Stay consistent. Eat on time.${name ? ` — ${name}` : ''}</p>
@@ -485,6 +507,13 @@ function renderPlan() {
         <button type="button" class="back-btn" data-nav="home">← Home</button>
         <h1>Custom Food Plan</h1>
       </div>
+
+      ${showCoachBanner() ? `
+      <button type="button" class="coach-banner" data-nav="coach">
+        <span class="coach-banner-icon">🔥</span>
+        <span class="coach-banner-text">New message from Coach Kory</span>
+        <span class="coach-banner-chevron">›</span>
+      </button>` : ''}
 
       <div class="summary-card">
         <h2>Daily targets</h2>
@@ -543,6 +572,58 @@ function renderPlan() {
     </div>`;
 }
 
+function formatCoachParagraphs(text) {
+  return text
+    .split('\n\n')
+    .map((p) => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .join('');
+}
+
+function renderCoach() {
+  const day = getCoachDay(getProgramDay());
+  if (!day) {
+    return `
+      <div class="screen coach-screen">
+        <div class="plan-header">
+          <button type="button" class="back-btn" data-nav="home">← Home</button>
+          <h1>Coach Kory</h1>
+        </div>
+        <div class="coach-empty">
+          <div class="coach-empty-icon">🔥</div>
+          <p>New content coming soon.</p>
+        </div>
+      </div>`;
+  }
+
+  const idx = store.coachCardIndex;
+  return `
+    <div class="screen coach-screen">
+      <div class="plan-header">
+        <button type="button" class="back-btn" data-nav="home">← Home</button>
+        <h1>Coach Kory</h1>
+        <span class="coach-counter">${idx + 1} / ${day.cards.length}</span>
+      </div>
+
+      <div class="coach-carousel" id="coachCarousel">
+        ${day.cards.map((card, i) => `
+          <div class="coach-slide" data-slide="${i}">
+            <div class="coach-text-card">
+              <h2>${card.title}</h2>
+              <div class="coach-body">${formatCoachParagraphs(card.text)}</div>
+            </div>
+            <img class="coach-screenshot" src="${card.image}" alt="Coach Kory day ${day.dayNumber} — card ${i + 1}" loading="lazy" />
+          </div>`).join('')}
+      </div>
+
+      <div class="coach-footer">
+        <div class="coach-dots">
+          ${day.cards.map((_, i) => `<span class="coach-dot ${i === idx ? 'active' : ''}" data-coach-dot="${i}"></span>`).join('')}
+        </div>
+        <p class="coach-swipe-hint">Swipe for next card</p>
+      </div>
+    </div>`;
+}
+
 function render() {
   const root = document.getElementById('app');
   if (store.screen === 'loading') {
@@ -551,14 +632,67 @@ function render() {
   }
   if (store.screen === 'setup') root.innerHTML = renderOnboarding();
   else if (store.screen === 'plan') root.innerHTML = renderPlan();
+  else if (store.screen === 'coach') root.innerHTML = renderCoach();
   else root.innerHTML = renderHome();
   bindEvents();
+}
+
+function updateCoachDots(idx, total) {
+  document.querySelectorAll('.coach-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === idx);
+  });
+  const counter = document.querySelector('.coach-counter');
+  if (counter) counter.textContent = `${idx + 1} / ${total}`;
+}
+
+let coachScrollHandler = null;
+
+function bindCoachCarousel() {
+  const carousel = document.getElementById('coachCarousel');
+  if (!carousel) return;
+
+  const day = getCoachDay(getProgramDay());
+  if (!day) return;
+
+  const total = day.cards.length;
+
+  if (coachScrollHandler) {
+    carousel.removeEventListener('scroll', coachScrollHandler);
+  }
+
+  coachScrollHandler = () => {
+    const width = carousel.clientWidth || 1;
+    const next = Math.min(Math.round(carousel.scrollLeft / width), total - 1);
+    if (next !== store.coachCardIndex) {
+      store.coachCardIndex = next;
+      updateCoachDots(next, total);
+      if (next === total - 1) markCoachDayComplete(day.dayNumber);
+    }
+  };
+
+  carousel.addEventListener('scroll', coachScrollHandler, { passive: true });
+
+  requestAnimationFrame(() => {
+    carousel.scrollLeft = store.coachCardIndex * carousel.clientWidth;
+  });
+
+  document.querySelectorAll('[data-coach-dot]').forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const i = Number(dot.dataset.coachDot);
+      store.coachCardIndex = i;
+      carousel.scrollTo({ left: i * carousel.clientWidth, behavior: 'smooth' });
+      updateCoachDots(i, total);
+      if (i === total - 1) markCoachDayComplete(day.dayNumber);
+    });
+  });
 }
 
 function bindEvents() {
   document.querySelectorAll('[data-nav]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      store.screen = btn.dataset.nav === 'setup' ? 'setup' : btn.dataset.nav;
+      const nav = btn.dataset.nav;
+      if (nav === 'coach') store.coachCardIndex = 0;
+      store.screen = nav === 'setup' ? 'setup' : nav;
       store.expandedMeal = null;
       render();
     });
@@ -661,6 +795,8 @@ function bindEvents() {
       removeOneFat(btn.dataset.removeFatSlot, decodeURIComponent(btn.dataset.removeFatName));
     });
   });
+
+  bindCoachCarousel();
 }
 
 async function init() {

@@ -1,5 +1,21 @@
-const CACHE = 'hardkor-v2';
-const ASSETS = ['./', './index.html', './css/styles.css', './js/app.js', './js/burnEngine.js', './data/foods.json', './manifest.json'];
+const CACHE = 'hardkor-v3';
+const ASSETS = [
+  './',
+  './index.html',
+  './css/styles.css',
+  './js/app.js',
+  './js/burnEngine.js',
+  './js/coachEngine.js',
+  './data/foods.json',
+  './manifest.json',
+  './img/coach/card-1.png',
+  './img/coach/card-2.png',
+  './img/coach/card-3.png',
+  './img/coach/card-4.png',
+  './img/coach/card-5.png',
+  './img/coach/card-6.png',
+  './img/coach/card-7.png',
+];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
