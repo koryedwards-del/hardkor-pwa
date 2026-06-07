@@ -8,7 +8,7 @@ alwaysApply: true
 - Full map: `~/operatingmanual/PROJECTS.md`
 - This repo: **Hardkor Diet** PWA — vanilla HTML/JS, localStorage
 - Host: GitHub Pages → https://koryedwards-del.github.io/hardkor-pwa/
-- Landing (separate repo, Vercel): hardkor-diet-website.vercel.app
+- Landing (separate repo, Render): thehardkordiet.com
 - No backend, no Render, no Resend
 
 Push to `main` deploys via GitHub Pages.
