@@ -8,6 +8,7 @@ alwaysApply: true
 - Full map: `~/operatingmanual/PROJECTS.md`
 - This repo: **Burn & Build** diet PWA — vanilla HTML/JS, localStorage
 - Host: GitHub Pages → https://koryedwards-del.github.io/pwa-burn-and-build/
-- Landing pages (unchanged for now): gettheburnandbuildapp.com, thehardkordiet.com
+- Landing: `~/code/burnandbuildlandingpage` → gettheburnandbuildapp.com
+- **Not connected to Hardkor Diet** (`hardkordietlandingpage` / thehardkordiet.com)
 
 Push to `main` deploys via GitHub Pages.
